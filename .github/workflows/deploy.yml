@@ -27,6 +27,6 @@ jobs:
       # 4️⃣ Faz o deploy para o Netlify
       - name: Atualiza site na Netlify
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.TOKEN_ID }}
+          NETLIFY_SITE_ID: ${{ secrets.PROJETO_ID }}
         run: netlify deploy --site=$PROJETO_ID --auth=$TOKEN_ID --dir="." --prod
